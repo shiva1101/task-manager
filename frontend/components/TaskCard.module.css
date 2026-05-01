@@ -1,0 +1,105 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.4rem;
+  transition: border-color 0.2s, transform 0.15s;
+  position: relative;
+}
+
+.card:hover {
+  border-color: #444;
+  transform: translateY(-1px);
+}
+
+.card.completed {
+  opacity: 0.65;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.priority {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.04em;
+}
+
+.date {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: 'DM Mono', monospace;
+}
+
+.menuActions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.editBtn, .deleteBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  transition: background 0.15s;
+}
+
+.editBtn:hover { background: var(--surface2); }
+.deleteBtn:hover { background: rgba(248, 113, 113, 0.15); border-color: var(--red); }
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+}
+
+.statusSelect {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  padding: 0.3rem 0.6rem;
+  font-size: 0.78rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+
+.badge.pending { background: rgba(251, 191, 36, 0.15); color: var(--yellow); }
+.badge.inprogress { background: rgba(96, 165, 250, 0.15); color: var(--blue); }
+.badge.completed { background: rgba(110, 231, 183, 0.15); color: var(--accent); }
